@@ -1,0 +1,29 @@
+import unittest
+import unittest.mock as mock
+from main import *
+
+
+class TestLab(unittest.TestCase):
+    def test_first_task_1(self):
+        with mock.patch("builtins.input", return_value="Сегодня отличный день 8-|, а погода просто чудесная! 8-| Мы решили пойти гулять в парк, где много деревьев 8-| и приятная атмосфера."):
+            self.assertEqual(first_task(), 3)
+
+    def test_first_task_2(self):
+        with mock.patch("builtins.input", return_value=""):
+            self.assertEqual(first_task(), 0)
+
+    def test_first_task_3(self):
+        with mock.patch("builtins.input", return_value="9-|8-||-8-8-|--|7--"):
+            self.assertEqual(first_task(), 2)
+
+    def test_first_task_4(self):
+        with mock.patch("builtins.input", return_value="Привет, как дела? 8-| Я сегодня сделал много дел 8-|, но всё ещё чувствую, что не успел завершить всё, что планировал. 8-|"):
+            self.assertEqual(first_task(), 3)
+
+    def test_first_task_5(self):
+        with mock.patch("builtins.input", return_value="М9-|ы приехали на дачу 8-|, и сразу8-| пошёл дождь. В8-|сё бы ничего, но я забыл зонт 8 -|, пришлось прятаться под деревом."):
+            self.assertEqual(first_task(), 3)
+
+
+if __name__ == "__main__":
+    unittest.main()
