@@ -61,8 +61,8 @@ class TestLab(unittest.TestCase):
             self.assertEqual(third_task(), True)
 
     def test_third_task_5(self):
-        with mock.patch("builtins.input", return_value="59 23 L * *"):
-            self.assertEqual(third_task(), True)
+        with mock.patch("builtins.input", return_value="* 25 15 6 3"):
+            self.assertEqual(third_task(), False)
 
 
 if __name__ == "__main__":
