@@ -33,7 +33,7 @@ class TestLab(unittest.TestCase):
             self.assertEqual(second_task(), "Не хайку. Должно быть 3 строки.")
 
     def test_second_task_3(self):
-        with mock.patch("builtins.input", return_value="Вечер за окном. \ Еще один день прожит. / Жизнь скоротечна..."):
+        with mock.patch("builtins.input", return_value="Вечер за окном. \\ Еще один день прожит. / Жизнь скоротечна..."):
             self.assertEqual(second_task(), "Не хайку. Должно быть 3 строки.")
 
     def test_second_task_4(self):
