@@ -44,6 +44,26 @@ class TestLab(unittest.TestCase):
         with mock.patch("builtins.input", return_value="Как сад похорошел! / И яблоки с дерев упали / Жаль, нет сегодня тебя рядом."):
             self.assertEqual(second_task(), "Не хайку.")
 
+    def test_third_task_1(self):
+        with mock.patch("builtins.input", return_value="30 18 * * 1,4"):
+            self.assertEqual(third_task(), True)
+
+    def test_third_task_2(self):
+        with mock.patch("builtins.input", return_value="30 9 * * 1"):
+            self.assertEqual(third_task(), True)
+
+    def test_third_task_3(self):
+        with mock.patch("builtins.input", return_value="59 14 * * 1-5"):
+            self.assertEqual(third_task(), True)
+
+    def test_third_task_4(self):
+        with mock.patch("builtins.input", return_value="*/10 9-17 * * 1-5"):
+            self.assertEqual(third_task(), True)
+
+    def test_third_task_5(self):
+        with mock.patch("builtins.input", return_value="59 23 L * *"):
+            self.assertEqual(third_task(), True)
+
 
 if __name__ == "__main__":
     unittest.main()
