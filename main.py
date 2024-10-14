@@ -27,7 +27,8 @@ def third_task() -> bool:
 
 
 if __name__ == "__main__":
-    choosing = input("Выберите номер таска для проверки: 1, 2, 3\n")
+    choosing = input(
+        "Выберите номер таска для проверки: 1 (смайлик 8-|), 2 (Хайку), 3 (Cron)\n")
     match choosing:
         case "1":
             print("Ответ:", first_task())

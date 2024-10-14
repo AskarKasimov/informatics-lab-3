@@ -4,6 +4,7 @@ from main import *
 
 
 class TestLab(unittest.TestCase):
+    # first task
     def test_first_task_1(self):
         with mock.patch("builtins.input", return_value="Сегодня отличный день 8-|, а погода просто чудесная! 8-| Мы решили пойти гулять в парк, где много деревьев 8-| и приятная атмосфера."):
             self.assertEqual(first_task(), 3)
@@ -24,6 +25,7 @@ class TestLab(unittest.TestCase):
         with mock.patch("builtins.input", return_value="М9-|ы приехали на дачу 8-|, и сразу8-| пошёл дождь. В8-|сё бы ничего, но я забыл зонт 8 -|, пришлось прятаться под деревом."):
             self.assertEqual(first_task(), 3)
 
+    # second task
     def test_second_task_1(self):
         with mock.patch("builtins.input", return_value="Вечер за окном. / Еще один день прожит. / Жизнь скоротечна..."):
             self.assertEqual(second_task(), "Хайку!")
@@ -44,6 +46,7 @@ class TestLab(unittest.TestCase):
         with mock.patch("builtins.input", return_value="Как сад похорошел! / И яблоки с дерев упали / Жаль, нет сегодня тебя рядом."):
             self.assertEqual(second_task(), "Не хайку.")
 
+    # third task
     def test_third_task_1(self):
         with mock.patch("builtins.input", return_value="30 18 * * 1,4"):
             self.assertEqual(third_task(), True)
